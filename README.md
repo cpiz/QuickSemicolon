@@ -14,6 +14,8 @@ An extention for VisualStudio 2013, allows you to move the caret to the end of l
 
 在编写代码过程中，按下设定的快捷键即可。
 
+![演示](https://raw.githubusercontent.com/cpiz/QuickSemicolon/master/show_how.gif)
+
 同时，VS菜单的工具中也增加了一个QuickSemicolon选项。
 
 #其他
