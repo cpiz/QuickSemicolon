@@ -88,8 +88,11 @@ namespace cpiznet.QuickSemicolon
                 ts.EndOfLine();
 
                 EditPoint2 ep = (EditPoint2)ts.ActivePoint.CreateEditPoint();
-                if (ep.LineLength > 0 && ep.GetText(-1) != ";")
+                string strRawLine = ep.GetLines(ts.ActivePoint.Line, ts.ActivePoint.Line + 1);
+                string strLine = strRawLine.TrimEnd();
+                if (strLine.Length > 0 && !strLine.EndsWith(";"))
                 {
+                    ep.DeleteWhitespace();
                     ep.Insert(";");
                 }
             }
